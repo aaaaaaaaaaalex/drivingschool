@@ -1,0 +1,20 @@
+.tel{
+	&__link{
+		position: relative;
+
+		font-size: 18px;
+		font-weight: 400;
+		color: #fff;
+
+		&:after{
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: -30px;
+			width: 22px;
+			height: 22px;
+
+			background: url("../img/tel/tel.svg") center/contain no-repeat;
+		}
+	}
+}

@@ -73,14 +73,30 @@ body.no-scroll {
 }
 
 .header__inner {
-  padding-top: 65px;
+  padding-top: 15px;
+  background-color: transparent;
+}
+
+.header__up {
+  margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .intro {
@@ -115,6 +131,7 @@ body.no-scroll {
 .logo__img {
   display: block;
   max-width: 100%;
+  width: 130px;
 }
 
 .burger {
@@ -194,32 +211,78 @@ body.no-scroll {
 }
 
 .nav {
-  padding-top: 10px;
+  display: none;
+  position: absolute;
+  top: 63px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin: 0 15px;
+  background-color: #fff;
+  -webkit-transition: height .3s ease;
+  -o-transition: height .3s ease;
+  transition: height .3s ease;
+  overflow: hidden;
+}
+
+.nav.active {
+  display: block;
 }
 
 .nav__ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav__ul-in {
   display: none;
 }
 
-.nav__li {
-  margin-right: 20px;
+.nav__ul-in.active {
+  display: block;
 }
 
 .nav__link,
 .nav__link-in {
+  display: block;
+  padding: 10px;
+  font-weight: 400;
+  color: #000;
+}
+
+.nav__link {
   font-size: 16px;
+}
+
+.nav__link.active {
+  color: #ff1e48;
+}
+
+.nav__link-in {
+  padding-left: 30px;
+  font-size: 14px;
+}
+
+.tel__link {
+  position: relative;
+  font-size: 18px;
   font-weight: 400;
   color: #fff;
 }
 
-.nav__link--show-ul:hover + .nav__ul-in {
-  display: block;
+.tel__link:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -30px;
+  width: 22px;
+  height: 22px;
+  background: url("../img/tel/tel.svg") center/contain no-repeat;
 }
 
 .btn {

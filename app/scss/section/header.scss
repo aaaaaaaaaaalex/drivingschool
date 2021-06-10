@@ -7,11 +7,20 @@
 	z-index: 1000;
 
 	&__inner{
-		padding-top: 65px;
+		padding-top: 15px;
+
+
+		background-color: transparent;
+	}
+	&__up{
+		margin-bottom: 25px;
 
 		display: flex;
 		justify-content: space-between;
-
-		background-color: transparent;
+		align-items: center;
+	}
+	&__down{
+		display: flex;
+		justify-content: flex-end;
 	}
 }

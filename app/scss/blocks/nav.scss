@@ -1,26 +1,60 @@
 .nav{
-	padding-top: 10px;
+	display: none;
 
+	position: absolute;
+	top: 63px;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	margin: 0 15px;
+
+	background-color: #fff;
+
+	transition: height .3s ease;
+	overflow: hidden;
+
+	&.active{
+		display: block;
+	}
 	&__ul{
 		display: flex;
+
+		flex-direction: column;
+
 	}
 	&__ul-in{
 		display: none;
+
+		&.active{
+			display: block;
+		}
 	}
-	&__li{
-		margin-right: 20px;
+	&__li,
+	&__li-in{
+
 	}
 	&__link,
 	&__link-in{
+		display: block;
+		padding: 10px;
 
-		font-size: 16px;
 		font-weight: 400;
-		color: #fff;
+		color: #000;
+	}
+	&__link{
+		font-size: 16px;
+
+		&.active{
+			color: #ff1e48;
+		}
+	}
+	&__link-in{
+		padding-left: 30px;
+
+		font-size: 14px;
 	}
 	&__link--show-ul:hover{
-		& + .nav__ul-in {
-			display: block;
-		}
+
 
 	}
 
