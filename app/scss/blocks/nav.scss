@@ -1,0 +1,27 @@
+.nav{
+	padding-top: 10px;
+
+	&__ul{
+		display: flex;
+	}
+	&__ul-in{
+		display: none;
+	}
+	&__li{
+		margin-right: 20px;
+	}
+	&__link,
+	&__link-in{
+
+		font-size: 16px;
+		font-weight: 400;
+		color: #fff;
+	}
+	&__link--show-ul:hover{
+		& + .nav__ul-in {
+			display: block;
+		}
+
+	}
+
+}
