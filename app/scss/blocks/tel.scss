@@ -1,10 +1,14 @@
 .tel{
+	margin-bottom: 10px;
+
 	&__link{
 		position: relative;
 
 		font-size: 18px;
 		font-weight: 400;
 		color: #fff;
+
+		transition: color .5s ease;
 
 		&:after{
 			content: "";
@@ -15,6 +19,17 @@
 			height: 22px;
 
 			background: url("../img/tel/tel.svg") center/contain no-repeat;
+
+			@media ($sm) {
+				top: 7px;
+			}
+		}
+		&:hover{
+			color: #414141;
+		}
+
+		@media ($sm) {
+			font-size: 24px;
 		}
 	}
 }

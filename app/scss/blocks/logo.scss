@@ -5,5 +5,11 @@
 
 		width: 130px;
 
+		@media ($sm) {
+			width: 200px;
+		}
+		@media ($xxxxl) {
+			width: 250px;
+		}
 	}
 }

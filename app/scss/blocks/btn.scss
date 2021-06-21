@@ -6,4 +6,55 @@
 	font-family: inherit;
 	background: none;
 	border: 0;
+
+	&-discount{
+		display: none;
+
+		margin-right: 15px;
+		padding: .6em 1em;
+
+		font-size: 10px;
+		font-weight: 700;
+		color: #fff;
+		line-height: calc(15/10);
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		border-radius: .4em;
+
+		background-color: #ff1e48;
+
+		transition: box-shadow .5s ease;
+
+		&:hover{
+			box-shadow: 0 0 20px rgba(0,0,0,.4);
+		}
+		&:focus{
+			outline: 0;
+			box-shadow: 0 0 0.2rem rgba(0,123,255,.25);
+		}
+		&--1{
+			@media ($usm) {
+				display: block;
+			}
+			@media ($sm) {
+				display: none;
+			}
+		}
+		&--2{
+			margin: 0 0 10px 0;
+
+			@media ($sm) {
+				display: block;
+
+				padding: .6em 2.5em;
+
+				font-size: 11px;
+			}
+			@media ($md) {
+				font-size: 12px;
+
+			}
+		}
+	}
 }

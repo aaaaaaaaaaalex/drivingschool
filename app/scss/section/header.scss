@@ -11,16 +11,27 @@
 
 
 		background-color: transparent;
+
+		@media ($sm) {
+			padding-top: 30px;
+		}
+		@media ($xxxxl) {
+			padding-top: 65px;
+		}
 	}
 	&__up{
 		margin-bottom: 25px;
 
 		display: flex;
 		justify-content: space-between;
+	}
+	&__right{
+		display: flex;
 		align-items: center;
 	}
 	&__down{
 		display: flex;
-		justify-content: flex-end;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }

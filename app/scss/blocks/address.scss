@@ -1,0 +1,28 @@
+.address{
+	display: none;
+
+	position: relative;
+
+	font-size: 12px;
+	font-weight: 400;
+	color: #fff;
+	line-height: 1;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 2px;
+		left: -37px;
+		width: 17px;
+		height: 17px;
+
+		background: url("../img/address/point.svg") center/contain no-repeat;
+	}
+
+	@media ($sm) {
+		display: block;
+	}
+	@media ($md) {
+		font-size: 14px;
+	}
+}
