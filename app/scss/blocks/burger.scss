@@ -69,6 +69,10 @@
 			transition: transform .3s ease-out;
 
 		}
+		&.black{
+			background-color: #000;
+
+		}
 	}
 
 	@media ($xxxl) {

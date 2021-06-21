@@ -1,7 +1,12 @@
 .tel{
-	margin-bottom: 10px;
+	&--white{
+		margin-bottom: 10px;
 
-	&__link{
+		&.hidden{
+			display: none;
+		}
+	}
+	&__link--white{
 		position: relative;
 
 		font-size: 18px;
@@ -32,4 +37,18 @@
 			font-size: 24px;
 		}
 	}
+	&--black{
+		display: none;
+
+		&.active{
+			display: block;
+		}
+	}
+	&__link--black{
+		font-size: 18px;
+		font-weight: 400;
+		color: #000;
+		line-height: 1;
+	}
+
 }

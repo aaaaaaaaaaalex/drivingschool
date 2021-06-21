@@ -1,5 +1,5 @@
 .logo{
-	&__img{
+	&__img--white{
 		display: block;
 		max-width: 100%;
 
@@ -10,6 +10,18 @@
 		}
 		@media ($xxxxl) {
 			width: 250px;
+		}
+		&.hidden{
+			display: none;
+		}
+	}
+	&__img--black{
+		display: none;
+
+		&.active{
+			display: block;
+
+			width: 130px;
 		}
 	}
 }

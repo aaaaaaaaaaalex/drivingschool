@@ -2,17 +2,35 @@
 	display: none;
 
 	position: absolute;
-	top: 63px;
+	top: 45px;
 	right: 0;
 	z-index: 10;
-	margin: 0 15px;
-	width: 320px;
+	width: 100%;
 
 	background-color: #fff;
 	box-shadow: 0 5px 5px rgba(0,0,0,.1);
+	white-space: nowrap;
 
 	transition: height .3s ease;
 	overflow: hidden;
+
+
+	@media ($sm) {
+		top: 60px;
+		width: 320px;
+	}
+
+	@media ($xxxl) {
+		display: block;
+
+		position: static;
+		width: auto;
+
+		background-color: transparent;
+		box-shadow: none;
+
+		overflow: visible;
+	}
 
 	&.active{
 		display: block;
@@ -28,6 +46,31 @@
 	}
 	&__li--por{
 		position: relative;
+
+		@media ($xxxl) {
+			&:hover .nav__ul-in{
+				display: block;
+
+				position: absolute;
+				top: 99%;
+				left: 50%;
+				right: 0;
+				z-index: 1;
+
+				width: 320px;
+				border-radius: 4px;
+
+				transform: translate(-50%, 0);
+
+				background-color: #fff;
+			}
+			&:hover .nav__link--show-ul{
+				color: #ff1e48;
+				background-color: #fff;
+				border-radius: 4px 4px 0 0;
+			}
+
+		}
 	}
 	&__ul-in{
 		display: none;
@@ -50,9 +93,7 @@
 
 		transition: color .5s ease;
 
-		@media ($xxxl) {
-			color: #fff;
-		}
+
 	}
 	&__link{
 		&.active{
@@ -78,53 +119,26 @@
 				}
 			}
 		}
+		@media ($xxxl) {
+			color: #fff;
+		}
+	}
+	&__link--show-ul{
+		&:hover{
+
+		}
 	}
 	&__link-in{
 		padding-left: 30px;
 
 		font-size: 14px;
-	}
-	&__link--show-ul{
+
 		&:hover{
-			position: relative;
-
 			color: #ff1e48;
-			background-color: #fff;
-		}
-		&:hover + .nav__ul-in{
-
-			@media ($xxxl) {
-				display: block;
-
-				position: absolute;
-				top: 100%;
-				left: 0;
-				right: 0;
-				z-index: 1;
-
-
-				background-color: #fff;
-			}
-		}
-		&:hover + .nav__ul-in > .nav__li-in > .nav__link-in{
-			color: #000;
 		}
 	}
 
-	@media ($sm) {
-		top: 100px;
-	}
 
-	@media ($xxxl) {
-		display: block;
 
-		position: static;
-		width: auto;
-
-		background-color: transparent;
-		box-shadow: none;
-
-		overflow: visible;
-	}
 
 }
