@@ -2,8 +2,10 @@
 	&--white{
 		margin-bottom: 10px;
 
-		&.hidden{
-			display: none;
+	}
+	&__link{
+		@media ($sm) {
+			font-size: 24px;
 		}
 	}
 	&__link--white{
@@ -33,22 +35,19 @@
 			color: #414141;
 		}
 
-		@media ($sm) {
-			font-size: 24px;
-		}
+
 	}
 	&--black{
 		display: none;
 
-		&.active{
-			display: block;
-		}
+
 	}
 	&__link--black{
 		font-size: 18px;
 		font-weight: 400;
 		color: #000;
 		line-height: 1;
+
 	}
 
 }

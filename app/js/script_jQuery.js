@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	// Изменение классов у нажатых ссылок+изменение высоты навигации при открытии/закрытии ul
 	let clickLinkShowUl = function(event) {
-		event.preventDefault;
+		event.preventDefault();
 
 		if(mediaQueryList.matches == false) {
 			// Если ширина экрана маленькая, и навигация показывается в виде списка
@@ -98,8 +98,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			heightNavCount();
 		} else {
 			nav.style.height = '0px';
-			console.log("установил высоту nav в 0");
-
 			nav.addEventListener('transitionend', function () {
 				nav.classList.remove('active');
 			}, {
@@ -122,33 +120,37 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	// Header Fixed+
 	let header = document.querySelector(".header");
-	let logoWhite = document.querySelector(".logo__img--white");
-	let logoBlack = document.querySelector(".logo__img--black");
-	let burgerItem = document.querySelector(".burger__item");
-	let telWhite = document.querySelector(".tel--white");
-	let telBlack = document.querySelector(".tel--black");
 
-	let onScroll = function() {
+	let headerFixed = function() {
 		if(window.pageYOffset > 100) {
 			header.classList.add("fixed");
-			logoWhite.classList.add("hidden");
-			logoBlack.classList.add("active");
-			burgerItem.classList.add("black");
-			telWhite.classList.add("hidden");
-			telBlack.classList.add("active");
-
 		} else {
 			header.classList.remove("fixed");
-			logoWhite.classList.remove("hidden");
-			logoBlack.classList.remove("active");
-			burgerItem.classList.remove("black");
-			telWhite.classList.remove("hidden");
-			telBlack.classList.remove("active");
-
 		}
 	};
+	window.addEventListener("scroll", headerFixed);
 
-	window.addEventListener("scroll", onScroll);
 
+
+
+	// Top Scroll
+	let buttonTopScroll = document.querySelector(".topscroll");
+
+	let toggleTopScroll = function() {
+		if(window.pageYOffset > 84) {
+			buttonTopScroll.classList.add("active");
+		} else {
+			buttonTopScroll.classList.remove("active");
+		}
+	};
+	window.addEventListener("scroll", toggleTopScroll);
+
+	let clickButtonTopScroll = function(event) {
+		event.preventDefault();
+
+
+	};
+
+	buttonTopScroll.addEventListener("click", clickButtonTopScroll)
 
 });

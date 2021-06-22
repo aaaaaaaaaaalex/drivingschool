@@ -11,17 +11,15 @@
 		@media ($xxxxl) {
 			width: 250px;
 		}
-		&.hidden{
-			display: none;
-		}
 	}
 	&__img--black{
 		display: none;
 
-		&.active{
-			display: block;
+		width: 130px;
 
-			width: 130px;
+		@media ($sm) {
+			width: 200px;
+
 		}
 	}
 }

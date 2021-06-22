@@ -6,9 +6,9 @@
 
 	z-index: 1000;
 
-	transition: background-color .3s ease;
+	background-color: transparent;
 
-	animation: header-not-fixed .5s ease;
+	transition: background-color .5s ease;
 
 
 	&.fixed{
@@ -21,6 +21,59 @@
 		background-color: #fff;
 
 		animation: header-fixed .5s ease;
+
+
+		// Other
+		.logo__img--white{
+			display: none;
+		}
+		.logo__img--black{
+			display: block;
+		}
+		.burger__item{
+			background-color: #000;
+		}
+		.burger__item:after{
+			background-color: #000;
+		}
+		.burger__item:before{
+			background-color: #000;
+		}
+		.tel--white{
+			display: none;
+		}
+		.tel--black{
+			display: block;
+
+			@media ($xxxl) {
+				display: none;
+			}
+		}
+		.header__inner{
+			padding-top: 10px;
+		}
+		.header__up{
+			margin-bottom: 10px;
+		}
+		.nav{
+			top: 43px;
+
+		}
+		.nav__link{
+			@media ($xxxl) {
+				color: #000;
+			}
+
+		}
+		.btn-discount--1{
+			display: none;
+		}
+		.btn-discount--2{
+			display: none;
+		}
+		.address{
+			display: none;
+		}
 
 	}
 	&__inner{
@@ -64,15 +117,7 @@
 		opacity: 1;
 	}
 }
-@keyframes header-not-fixed{
-	0%{
-		background-color: #fff;
-	}
-	100%{
-		background-color: transparent;
-	}
-}
 
 main {
-	height: 2000px;
+	height: 4000px;
 }
