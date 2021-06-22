@@ -136,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	// Top Scroll
 	let buttonTopScroll = document.querySelector(".topscroll");
 
+	// Появление/исчезновение кнопки при скролле страницы
 	let toggleTopScroll = function() {
 		if(window.pageYOffset > 84) {
 			buttonTopScroll.classList.add("active");
@@ -145,12 +146,14 @@ document.addEventListener("DOMContentLoaded", function(){
 	};
 	window.addEventListener("scroll", toggleTopScroll);
 
+	// Скролл на вверх при нажатии на кнопку
 	let clickButtonTopScroll = function(event) {
 		event.preventDefault();
-
-
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
 	};
-
 	buttonTopScroll.addEventListener("click", clickButtonTopScroll)
 
 });

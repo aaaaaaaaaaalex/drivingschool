@@ -207,6 +207,7 @@ main {
 
 .intro {
   max-width: 1400px;
+  min-height: 700px;
   margin: 0 auto;
   height: 100vh;
   position: relative;
@@ -595,7 +596,7 @@ main {
   opacity: 1;
 }
 
-.topscroll__link {
+.topscroll__btn {
   color: #fff;
   font-size: 24px;
   text-align: center;
