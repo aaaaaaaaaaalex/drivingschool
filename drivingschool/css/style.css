@@ -201,10 +201,6 @@ body.no-scroll {
   }
 }
 
-main {
-  height: 4000px;
-}
-
 .intro {
   max-width: 1400px;
   min-height: 700px;
@@ -269,6 +265,43 @@ main {
   font-weight: 400;
   color: #fff;
   line-height: 1.5;
+}
+
+.subintro {
+  background-color: #efefef;
+}
+
+.subintro__inner {
+  padding: 50px 0;
+}
+
+.subintro__title {
+  position: relative;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.subintro__title:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: auto;
+  height: 5px;
+  background-color: #ff1e48;
+  width: 130px;
+}
+
+.subintro__img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .footer {

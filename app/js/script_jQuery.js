@@ -156,4 +156,24 @@ document.addEventListener("DOMContentLoaded", function(){
 	};
 	buttonTopScroll.addEventListener("click", clickButtonTopScroll)
 
+
+
+
+	// Down Scroll
+	let buttonDownScroll = document.querySelector(".scroll");
+	let intro = document.querySelector(".intro");
+	let introHeight = intro.clientHeight;
+	let offsetPosition = introHeight - 70;
+
+
+	// Скролл вниз при нажатии на кнопку
+	let clickButtonDownScroll = function(event) {
+		event.preventDefault();
+		window.scrollBy({
+			top: offsetPosition,
+			behavior: "smooth"
+		});
+	};
+	buttonDownScroll.addEventListener("click", clickButtonDownScroll)
+
 });
