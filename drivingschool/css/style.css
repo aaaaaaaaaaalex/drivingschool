@@ -279,6 +279,10 @@ body.no-scroll {
   max-width: 100%;
 }
 
+.registration__inner {
+  padding: 40px;
+}
+
 .footer {
   background-color: #5A5A5A;
 }
@@ -738,6 +742,11 @@ body.no-scroll {
   height: 5px;
   background-color: #ff1e48;
   width: 130px;
+}
+
+.section__title--white {
+  text-align: left;
+  color: #fff;
 }
 
 .six-block {

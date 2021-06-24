@@ -1,4 +1,5 @@
 @@include('check_webp_css.js')
+@@include('parallax.js')
 
 document.addEventListener("DOMContentLoaded", function(){
 
