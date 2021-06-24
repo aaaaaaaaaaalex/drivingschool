@@ -55,6 +55,35 @@
 				font-size: 12px;
 
 			}
+			@media ($xxxl) {
+				font-size: 14px;
+			}
+		}
+	}
+	&-more{
+		padding: .43em .7em;
+
+		font-size: 14px;
+		font-weight: 600;
+		color: #fff;
+		line-height: 1.5;
+		text-transform: uppercase;
+
+		border-radius: .3em;
+
+		background-color: rgba(255,255,255,.35);
+
+		transition: background-color .5s ease;
+
+		@media ($sm) {
+			padding: .43em 2.14em;
+		}
+		&:hover{
+			background-color: #ff1e48;
+		}
+		&:focus{
+			outline: 0;
+			box-shadow: 0 0 0.2rem rgba(0,123,255,.25);
 		}
 	}
 }

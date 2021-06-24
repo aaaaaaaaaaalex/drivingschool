@@ -1,0 +1,40 @@
+.section{
+	padding: 50px 0;
+
+	@media ($sm) {
+		padding: 85px 0;
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 40px;
+
+		text-align: center;
+
+		font-size: 22px;
+		font-weight: 600;
+		color: #000;
+		line-height: 1.2;
+		text-transform: uppercase;
+
+		@media ($sm) {
+			margin-bottom: 60px;
+
+			font-size: 36px;
+		}
+		@media ($xxxl) {
+			font-size: 46px;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			left: 0;
+			right: 0;
+			bottom: -20px;
+			margin: auto;
+			height: 5px;
+			background-color: #ff1e48;
+			width: 130px;
+		}
+	}
+}

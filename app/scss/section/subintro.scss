@@ -1,34 +1,8 @@
 .subintro {
+	max-width: 1400px;
+	margin: 0 auto;
+
 	background-color: #efefef;
-
-	&__inner {
-		padding: 50px 0;
-	}
-
-	&__title {
-		position: relative;
-		margin-bottom: 40px;
-
-		text-align: center;
-
-		font-size: 22px;
-		font-weight: 600;
-		color: #000;
-		line-height: 1.2;
-		text-transform: uppercase;
-
-		&:before {
-			position: absolute;
-			content: '';
-			left: 0;
-			right: 0;
-			bottom: -20px;
-			margin: auto;
-			height: 5px;
-			background-color: #ff1e48;
-			width: 130px;
-		}
-	}
 
 	&__img {
 		display: block;
