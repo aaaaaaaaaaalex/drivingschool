@@ -587,13 +587,14 @@ document.addEventListener("DOMContentLoaded", function(){
 	// Down Scroll
 	let buttonDownScroll = document.querySelector(".scroll");
 	let intro = document.querySelector(".intro");
-	let introHeight = intro.clientHeight;
-	let offsetPosition = introHeight - 70;
-
 
 	// Скролл вниз при нажатии на кнопку
 	let clickButtonDownScroll = function(event) {
 		event.preventDefault();
+
+		let introHeight = intro.clientHeight;
+		var offsetPosition = introHeight - 70;
+
 		window.scrollBy({
 			top: offsetPosition,
 			behavior: "smooth"
