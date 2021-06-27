@@ -99,9 +99,11 @@
 		position: relative;
 		z-index: 1;
 
-		margin: 0 auto;
 
+		@media ($xxl) {
+			margin: 0 auto;
 
+		}
 		&:hover ~ .six-block__link .six-block__img{
 			transform: translate(-50%, -50%) scale(1.1);
 			opacity: .3;

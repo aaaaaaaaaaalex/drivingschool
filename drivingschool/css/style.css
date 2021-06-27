@@ -284,11 +284,10 @@ body.no-scroll {
 }
 
 .footer {
-  padding: 40px 0 20px;
-}
-
-.footer__inner {
+  max-width: 1400px;
+  margin: 0 auto;
   background-color: #414141;
+  padding: 40px 0 75px;
 }
 
 .logo__img--white {
@@ -300,6 +299,10 @@ body.no-scroll {
 .logo__img--black {
   display: none;
   width: 130px;
+}
+
+.logo__img--footer {
+  margin: 0 auto 10px;
 }
 
 .burger {
@@ -472,6 +475,14 @@ body.no-scroll {
   margin-bottom: 10px;
 }
 
+.tel--black {
+  display: none;
+}
+
+.tel--footer {
+  text-align: center;
+}
+
 .tel__link--white {
   position: relative;
   font-size: 18px;
@@ -494,10 +505,6 @@ body.no-scroll {
 
 .tel__link--white:hover {
   color: #414141;
-}
-
-.tel--black {
-  display: none;
 }
 
 .tel__link--black {
@@ -875,7 +882,6 @@ body.no-scroll {
 .six-block__content {
   position: relative;
   z-index: 1;
-  margin: 0 auto;
 }
 
 .six-block__content:hover ~ .six-block__link .six-block__img {
@@ -975,7 +981,7 @@ body.no-scroll {
 
 .ajax-loader {
   visibility: hidden;
-  display: inline-block;
+  display: block;
   background-image: url("../img/loader/ajax-loader.gif");
   width: 16px;
   height: 16px;
@@ -985,6 +991,30 @@ body.no-scroll {
   vertical-align: middle;
   font-size: 0;
   color: transparent;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.privacy-policy {
+  text-align: center;
+}
+
+.privacy-policy__link {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.5;
+  text-decoration: underline;
+}
+
+.privacy-policy__link:hover {
+  text-decoration: none;
 }
 
 .tac {
@@ -1034,6 +1064,23 @@ body.no-scroll {
 
   .intro__subtitle {
     font-size: 24px;
+  }
+
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer__up {
+    margin-bottom: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .logo__img--white {
@@ -1154,6 +1201,10 @@ body.no-scroll {
   .six-block__item {
     padding: 0 75px;
     text-align: center;
+  }
+
+  .six-block__content {
+    margin: 0 auto;
   }
 
   .six-block__title:before {
