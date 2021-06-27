@@ -35,10 +35,31 @@
 			height: 5px;
 			background-color: #ff1e48;
 			width: 130px;
+
+			@media ($sm) {
+				bottom: -30px;
+			}
 		}
 		&--white{
 			text-align: left;
 			color: #fff;
+
+
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				right: 0;
+				bottom: -20px;
+				margin: 0 0 auto 0;
+				height: 5px;
+				background-color: #ff1e48;
+				width: 130px;
+
+				@media ($sm) {
+					bottom: -30px;
+				}
+			}
 		}
 	}
 }

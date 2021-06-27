@@ -1,0 +1,14 @@
+.ajax-loader{
+	visibility: hidden;
+	display: inline-block;
+	background-image: url("../img/loader/ajax-loader.gif");
+	width: 16px;
+	height: 16px;
+	border: none;
+	padding: 0;
+	margin: 0 0 0 4px;
+	vertical-align: middle;
+
+	font-size: 0;
+	color: transparent;
+}
