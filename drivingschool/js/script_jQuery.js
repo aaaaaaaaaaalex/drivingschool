@@ -588,17 +588,28 @@ document.addEventListener("DOMContentLoaded", function(){
 	let buttonDownScroll = document.querySelector(".scroll");
 	let intro = document.querySelector(".intro");
 
+	let scrollWindow = function() {
+		setTimeout(function () {
+			console.log(window.scrollY);
+		}, 2000);
+	}
+
 	// Скролл вниз при нажатии на кнопку
 	let clickButtonDownScroll = function(event) {
 		event.preventDefault();
 
 		let introHeight = intro.clientHeight;
-		var offsetPosition = introHeight - 70;
+		let offsetPosition = introHeight - 70;
+		console.log("introHeight",introHeight);
+		console.log("offsetPosition",offsetPosition);
 
-		window.scrollBy({
+		window.scrollTo({
 			top: offsetPosition,
 			behavior: "smooth"
 		});
+
+		scrollWindow();
+
 	};
 	buttonDownScroll.addEventListener("click", clickButtonDownScroll)
 
